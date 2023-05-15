@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_test/ui/user_page.dart';
 
 import 'ui/home_page.dart';
 
@@ -17,7 +18,11 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const HomePage(title: 'WhyZap'),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const HomePage(title: 'WhyZap'),
+        '/user-page': (context) => const UserPage(),
+      },
     );
   }
 }
