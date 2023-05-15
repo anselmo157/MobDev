@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_test/ui/user_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key, required this.title});
@@ -25,6 +26,18 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
         centerTitle: true,
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const UserPage(),
+                ),
+              );
+            },
+            icon: const Icon(Icons.person),
+          ),
+        ],
       ),
       body: Center(
         child: Column(
