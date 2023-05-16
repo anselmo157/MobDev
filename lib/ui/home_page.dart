@@ -6,30 +6,28 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.primary,
-        title: const Text(
-          'WhyZap',
-          style: TextStyle(color: Colors.white),
-        ),
-        centerTitle: true,
-        actions: [
-          IconButton(
-            onPressed: () {
-              Navigator.of(context).pushNamed('/user-page');
-            },
-            icon: const Icon(Icons.person, color: Colors.white),
-            
+        appBar: AppBar(
+          backgroundColor: Theme.of(context).colorScheme.primary,
+          title: const Text(
+            'WhyZap',
+            style: TextStyle(color: Colors.white),
           ),
-        ],
-        shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.vertical(
-            bottom: Radius.circular(12.0),
+          centerTitle: true,
+          actions: [
+            IconButton(
+              onPressed: () {
+                Navigator.of(context).pushNamed('/user-page');
+              },
+              icon: const Icon(Icons.person, color: Colors.white),
+            ),
+          ],
+          shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.vertical(
+              bottom: Radius.circular(12.0),
+            ),
           ),
         ),
-      ),
-      backgroundColor: Colors.yellow[50],
-      body: Container()
-    );
+        backgroundColor: Colors.yellow[50],
+        body: Container());
   }
 }
