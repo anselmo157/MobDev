@@ -8,11 +8,16 @@ class HomePage extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Theme.of(context).colorScheme.primary,
+          centerTitle: true,
           title: const Text(
             'WhyZap',
             style: TextStyle(color: Colors.white),
           ),
-          centerTitle: true,
+          shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.vertical(
+              bottom: Radius.circular(12.0),
+            ),
+          ),
           actions: [
             IconButton(
               onPressed: () {
@@ -21,11 +26,6 @@ class HomePage extends StatelessWidget {
               icon: const Icon(Icons.person, color: Colors.white),
             ),
           ],
-          shape: const RoundedRectangleBorder(
-            borderRadius: BorderRadius.vertical(
-              bottom: Radius.circular(12.0),
-            ),
-          ),
         ),
         backgroundColor: Colors.yellow[50],
         body: Container());
