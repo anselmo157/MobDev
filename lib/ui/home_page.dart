@@ -8,27 +8,28 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.primary,
-        title: const Text('WhyZap'),
+        title: const Text(
+          'WhyZap',
+          style: TextStyle(color: Colors.white),
+        ),
         centerTitle: true,
         actions: [
           IconButton(
             onPressed: () {
               Navigator.of(context).pushNamed('/user-page');
             },
-            icon: const Icon(Icons.person),
+            icon: const Icon(Icons.person, color: Colors.white),
+            
           ),
         ],
-      ),
-      body: const Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-          ],
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(
+            bottom: Radius.circular(12.0),
+          ),
         ),
       ),
+      backgroundColor: Colors.yellow[50],
+      body: Container()
     );
   }
 }
