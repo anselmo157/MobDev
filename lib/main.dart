@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
-        '/': (context) => const HomePage(title: 'WhyZap'),
+        '/': (context) => const HomePage(),
         '/user-page': (context) => const UserPage(),
       },
     );
